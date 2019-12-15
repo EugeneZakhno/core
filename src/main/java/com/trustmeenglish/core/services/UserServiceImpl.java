@@ -12,7 +12,8 @@ public class UserServiceImpl {
     private UserRepository userRepository;
 
     @Override
-    public User getUser(){
+    public User getUser(Long id){
+        id++;
         return userRepository.findById(id).get();
     }
 
